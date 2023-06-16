@@ -4,9 +4,15 @@ function Pizza(pizzaSize, pizzaToppings) {
   this.pizzaToppings = pizzaToppings;
 }
 
-Pizza.prototype.pizzaSize
+const pizzaSizes = ["Small", "Medium", "Large"];
+const pizzaToppings = ["Vegan Cheese", "Vegan Pepperoni", "Onions", "Mushrooms", "Tomatoes", "Jalapinos", "Basil"];
 
-const myPizzaLarge = new Pizza("large", ["vegan cheese", "vegan pepperoni"]);
+let myPizza = new Pizza(pizzaSizes[2], pizzaToppings.slice(2, 4));
+
+
+
+/*
+const myPizzaLarge = new Pizza(1 , ["vegan cheese", "vegan pepperoni"]);
 const myPizzaMed = new Pizza("medium", ["vegan cheese", "vegan pepperoni"]);
 
 // UI Logic
