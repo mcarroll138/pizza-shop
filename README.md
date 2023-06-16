@@ -25,3 +25,15 @@ Code: function Pizza(pizzaSize, pizzaToppings) {
 let myPizza = new Pizza(pizzaSizes[2], pizzaToppings.slice(2, 4));
 Expected Output = myPizza ["large", "Onions", "Mushrooms"]
 
+Test: "It will create a base cost for different size pizzas"
+Code: Pizza.prototype.calculatePizzaSizeCost = function
+Expected Output = this.baseCost = 20
+
+Test: "It will calculate toppings cost based on what is ordered"
+Code: Pizza.prototype.calculateToppingsCost = function
+Expected Output = this.ToppingsCost = 6
+
+Test: "It will calculate total cost of pizza based on size and number of toppings"
+Code: myPizza.calculateTotalPizzaCost();
+Expected Output = this.totalPizzaCost = $26
+
