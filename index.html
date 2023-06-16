@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Little Picsay Shop</title>
+</head>
+
+<body>
+  <div>
+    <h1>Welcome to our Lil' Peeksah Shop!</h1>
+
+    <form action="/action_page.php">
+      <p>Please select the size of pizza you would like to order:</p>
+        <input type="radio" id="small" name="sizePizza" value="small">
+        <label for="small">SMALL</label><br>
+        <input type="radio" id="medium" name="sizePizza" value="medium">
+        <label for="medium">MEDIUM</label><br>
+        <input type="radio" id="large" name="sizePizza" value="large">
+        <label for="large">LARGE</label><br>
+        <input type="radio" id="xlarge" name="sizePizza" value="xlarge">
+        <label for="xlarge">EXTRA LARGE</label><br>
+
+      <br>
+
+      <p>Please select your toppings, please note each topping is $2.00 extra:</p>
+      <input type="checkbox" id="topping0" name="topping" value="0">
+      <label for="topping0">Vegan Cheese</label><br>
+      <input type="checkbox" id="topping1" name="topping" value="1">
+      <label for="topping1">Vegan Pepperoni</label><br>
+      <input type="checkbox" id="topping2" name="topping" value="2">
+      <label for="topping2">Onions</label><br>
+      <input type="checkbox" id="topping3" name="topping" value="3">
+      <label for="topping3">Mushrooms</label><br>
+      <input type="checkbox" id="topping4" name="topping" value="4">
+      <label for="topping4">Tomatoes</label><br>
+      <input type="checkbox" id="topping5" name="topping" value="5">
+      <label for="topping5">Jalapinos</label><br>
+      <input type="checkbox" id="topping6" name="topping" value="6">
+      <label for="topping6">Basil</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+
+    <p>You final total</p>
+
+    <div id="results" class="beeps"></div>
+  </div>
+</body>
+
+</html>

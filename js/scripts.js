@@ -42,8 +42,4 @@ console.log("$", myPizza.baseCost)
 console.log("$", myPizza.pizzaToppingsCost);
 console.log("$", myPizza.totalPizzaCost);
 
-/*
-const myPizzaLarge = new Pizza(1 , ["vegan cheese", "vegan pepperoni"]);
-const myPizzaMed = new Pizza("medium", ["vegan cheese", "vegan pepperoni"]);
-
 // UI Logic
