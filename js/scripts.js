@@ -32,9 +32,6 @@ Pizza.prototype.calculateTotalPizzaCost = function () {
 const pizzaSizes = ["Small", "Medium", "Large", "Extra Large"];
 const pizzaToppings = ["Vegan Cheese", "Vegan Pepperoni", "Onions", "Mushrooms", "Tomatoes", "Jalapinos", "Basil"];
 
-let myPizza = new Pizza(pizzaSizes[2], [pizzaToppings[0], pizzaToppings[1], pizzaToppings[3]]);
-
-
 myPizza.calculatePizzaSizeCost();
 myPizza.calculatePizzaToppingsCost();
 myPizza.calculateTotalPizzaCost();
@@ -42,4 +39,28 @@ console.log("$", myPizza.baseCost)
 console.log("$", myPizza.pizzaToppingsCost);
 console.log("$", myPizza.totalPizzaCost);
 
-// UI Logic
+
+
+// User Interface Logic ---------
+function handleFormSubmission(event) {
+  event.preventDefault();
+
+  const pizzaSizeSelect = document.getElementById("pizza-size");
+  const pizzaToppingsSelect = document.getElementById("pizza-toppings");
+
+  const selectedPizzaSize = pizzaSizeSelect.value;
+  const selectedPizzaToppings = Array.from(pizzaToppingsSelect.selectedOptions).map(option => option.value);
+
+
+  let myPizza = new Pizza(selectedPizzaSize, selectedPizzaToppings);
+
+  myPizza.calculatePizzaSizeCost();
+  myPizza.calculatePizzaToppingsCost();
+  myPizza.calculateTotalPizzaCost();
+
+  const totalCostDisplay = document.getElementById("total-cost");
+  totalCostDisplay.textContent = `$${myPizza.totalPizzaCost}`;
+}
+
+const form = document.getElementById("pizza-form");
+form.addEventListener("submit", handleFormSubmission);
