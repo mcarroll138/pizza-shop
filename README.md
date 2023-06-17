@@ -3,6 +3,7 @@
 ### By Michael Carroll
 
 A website created to demonstrate the use of object constructors, prototype method and branching. The user can order a pizza and add toppings and will recieve the total cost of the pizza based on their choices.
+Link to GitHub: https://github.com/mcarroll138
 
 ## Technologies used 
 - HTML
