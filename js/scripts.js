@@ -41,7 +41,11 @@ function handleFormSubmission(event) {
 
   if (selectedSize && selectedToppings.length > 0) {
     const pizzaSize = selectedSize.value;
-    const pizzaToppings = selectedToppings.map(topping => topping.value);
+    const pizzaToppings = [];
+
+    for (let i = 0; i < selectedToppings.length; i++) {
+      pizzaToppings.push(selectedToppings[i].value);
+    }
 
     myPizza = new Pizza(pizzaSize, pizzaToppings);
     myPizza.calculatePizzaSizeCost();
